@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <top>
+      <VBox prefHeight="71.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                        <MenuItem fx:id="Open" mnemonicParsing="false" text="Open" />
+                        <MenuItem fx:id="Save" mnemonicParsing="false" text="Save" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <ToolBar prefHeight="40.0" prefWidth="200.0">
+              <items>
+                <Button mnemonicParsing="false" onAction="#NewLineButtonClicked" text="NewLine" />
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#RunButtonClicked" text="Run" />
+              </items>
+            </ToolBar>
+            <ToolBar prefHeight="40.0" prefWidth="200.0">
+              <items>
+                <Button fx:id="OS" mnemonicParsing="false" onAction="#OSButtonClicked" text="--| |--" />
+                  <Button fx:id="CS" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#CSButtonClicked" text="--|/|--" />
+                  <Button fx:id="vS" layoutX="265.0" layoutY="10.0" mnemonicParsing="false" onAction="#vSButtonClicked" text="--|v|--" />
+                  <Button fx:id="upS" layoutX="211.0" layoutY="10.0" mnemonicParsing="false" onAction="#upSButtonClicked" text="--|^|--" />
+                  <Button fx:id="OR" layoutX="59.0" layoutY="10.0" mnemonicParsing="false" onAction="#ORButtonClicked" text="--( )--" />
+                  <Button fx:id="CR" layoutX="108.0" layoutY="10.0" mnemonicParsing="false" onAction="#CRButtonClicked" text="--(/)--" />
+                  <Button fx:id="SR" layoutX="319.0" layoutY="10.0" mnemonicParsing="false" text="--(S)--" />
+                  <Button fx:id="RR" layoutX="370.0" layoutY="10.0" mnemonicParsing="false" text="--(R)--" />
+                  <Button fx:id="SC" layoutX="159.0" layoutY="10.0" mnemonicParsing="false" onAction="#SCButtonClicked" text="-------" />
+                  <Button fx:id="PRLL" layoutX="423.0" layoutY="10.0" mnemonicParsing="false" onAction="#PRLLButtonClicked" text="|______|" />
+              </items>
+            </ToolBar>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <Canvas fx:id="canvas1" height="500.0" onMouseClicked="#canvas1CanvasOnMouseClicked" width="646.0" BorderPane.alignment="CENTER" />
+   </center>
+   <left>
+      <TreeView prefHeight="305.0" prefWidth="150.0" BorderPane.alignment="CENTER" />
+   </left>
+</BorderPane>
